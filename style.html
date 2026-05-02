@@ -1,0 +1,177 @@
+<style>
+/* ── Google Font ───────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Root Variables ────────────────────────────────────────────────────── */
+:root {
+  --bg-primary:   #0d1117;
+  --bg-card:      #161b22;
+  --bg-sidebar:   #0d1117;
+  --accent:       #58a6ff;
+  --accent-green: #3fb950;
+  --accent-red:   #f85149;
+  --accent-blue:  #58a6ff;
+  --text-primary: #e6edf3;
+  --text-muted:   #8b949e;
+  --border:       #30363d;
+  --radius:       12px;
+}
+
+/* ── Global Reset ──────────────────────────────────────────────────────── */
+html, body, [class*="css"] {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── Main Container ─────────────────────────────────────────────────────── */
+.main .block-container {
+  padding: 2rem 3rem !important;
+  max-width: 1200px !important;
+}
+
+/* ── Header Block ───────────────────────────────────────────────────────── */
+.header-block {
+  background: linear-gradient(135deg, #161b22 0%, #1c2333 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.header-block h1 {
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.header-block p {
+  color: var(--text-muted) !important;
+  font-size: 1.05rem !important;
+}
+
+/* ── Section Headings ───────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* ── Result Card ────────────────────────────────────────────────────────── */
+.result-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
+}
+.result-card:hover {
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.08);
+}
+.result-card h2 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.4rem !important;
+}
+.result-card p {
+  color: var(--text-muted) !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* ── File Uploader ──────────────────────────────────────────────────────── */
+[data-testid="stFileUploader"] {
+  border: 2px dashed var(--border) !important;
+  border-radius: var(--radius) !important;
+  background: var(--bg-card) !important;
+  padding: 1.5rem !important;
+  transition: border-color 0.2s ease;
+}
+[data-testid="stFileUploader"]:hover {
+  border-color: var(--accent) !important;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+.stButton > button {
+  background: var(--accent) !important;
+  color: #0d1117 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 0.55rem 1.4rem !important;
+  transition: opacity 0.2s ease;
+}
+.stButton > button:hover {
+  opacity: 0.85 !important;
+}
+
+/* ── Progress Bars ──────────────────────────────────────────────────────── */
+[data-testid="stProgressBar"] > div > div {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-green) 100%) !important;
+  border-radius: 99px !important;
+}
+[data-testid="stProgressBar"] {
+  background: var(--border) !important;
+  border-radius: 99px !important;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+  background: var(--bg-sidebar) !important;
+  border-right: 1px solid var(--border) !important;
+}
+[data-testid="stSidebar"] * {
+  color: var(--text-primary) !important;
+}
+
+/* ── Info / Warning / Error boxes ──────────────────────────────────────── */
+[data-testid="stAlert"] {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* ── Spinner ────────────────────────────────────────────────────────────── */
+[data-testid="stSpinner"] {
+  color: var(--accent) !important;
+}
+
+/* ── Metrics ────────────────────────────────────────────────────────────── */
+[data-testid="metric-container"] {
+  background: var(--bg-card) !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+  padding: 1rem !important;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────── */
+hr {
+  border-color: var(--border) !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* ── Checkbox ───────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"] label {
+  color: var(--text-primary) !important;
+}
+
+/* ── Number inputs ──────────────────────────────────────────────────────── */
+[data-testid="stNumberInput"] input {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+}
+
+/* ── Image captions ─────────────────────────────────────────────────────── */
+[data-testid="stImage"] p {
+  color: var(--text-muted) !important;
+  font-size: 0.82rem !important;
+  text-align: center;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+</style>
